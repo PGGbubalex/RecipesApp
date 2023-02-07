@@ -25,12 +25,12 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    public Map<Integer, Recipe> getAllRecipes(){
+    public Map<Integer, Recipe> getAllRecipes() {
         return recipes;
     }
 
     @Override
-    public Recipe editRecipe(int id, Recipe recipe){
+    public Recipe editRecipe(int id, Recipe recipe) {
         if (recipes.containsKey(id)) {
             recipes.put(id, recipe);
             return recipes.get(id);
@@ -39,7 +39,7 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    public boolean deleteRecipe(int id){
+    public boolean deleteRecipe(int id) {
         if (recipes.containsKey(id)) {
             recipes.remove(id);
             return true;

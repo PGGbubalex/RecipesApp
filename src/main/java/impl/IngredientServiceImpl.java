@@ -26,12 +26,12 @@ public class IngredientServiceImpl implements IngredientService {
     }
 
     @Override
-    public Map<Integer, Ingredient> getAllIngredients(){
+    public Map<Integer, Ingredient> getAllIngredients() {
         return ingredients;
     }
 
     @Override
-    public Ingredient editIngredient(int id, Ingredient ingredient){
+    public Ingredient editIngredient(int id, Ingredient ingredient) {
         if (ingredients.containsKey(id)) {
             ingredients.put(id, ingredient);
             return ingredients.get(id);
@@ -40,7 +40,7 @@ public class IngredientServiceImpl implements IngredientService {
     }
 
     @Override
-    public boolean deleteIngredient(int id){
+    public boolean deleteIngredient(int id) {
         if (ingredients.containsKey(id)) {
             ingredients.remove(id);
             return true;
