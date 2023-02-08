@@ -1,5 +1,6 @@
 package impl;
 
+import model.Ingredient;
 import model.Recipe;
 import org.springframework.stereotype.Service;
 import services.RecipeService;
@@ -16,7 +17,7 @@ public class RecipeServiceImpl implements RecipeService {
     @Override
     public int addRecipe(Recipe recipe) {
         recipes.put(id, recipe);
-        return id++;
+        return id;
     }
 
     @Override

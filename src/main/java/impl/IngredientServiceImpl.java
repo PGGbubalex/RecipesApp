@@ -34,7 +34,7 @@ public class IngredientServiceImpl implements IngredientService {
     public Ingredient editIngredient(int id, Ingredient ingredient) {
         if (ingredients.containsKey(id)) {
             ingredients.put(id, ingredient);
-            return ingredients.get(id);
+            return ingredient;
         }
         return null;
     }
