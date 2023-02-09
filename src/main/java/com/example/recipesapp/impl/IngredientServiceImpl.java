@@ -1,8 +1,8 @@
-package impl;
+package com.example.recipesapp.impl;
 
-import model.Ingredient;
+import com.example.recipesapp.model.Ingredient;
 import org.springframework.stereotype.Service;
-import services.IngredientService;
+import com.example.recipesapp.services.IngredientService;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -10,14 +10,14 @@ import java.util.Map;
 @Service
 public class IngredientServiceImpl implements IngredientService {
 
-    private int id = 0;
+    private int ingredientId = 0;
 
     private static Map<Integer, Ingredient> ingredients = new LinkedHashMap<>();
 
     @Override
     public int addIngredient(Ingredient ingredient) {
-        ingredients.put(id, ingredient);
-        return id++;
+        ingredients.put(ingredientId, ingredient);
+        return ingredientId++;
     }
 
     @Override

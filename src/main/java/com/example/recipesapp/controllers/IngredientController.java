@@ -1,12 +1,12 @@
-package controllers;
+package com.example.recipesapp.controllers;
 
-import model.Ingredient;
+import com.example.recipesapp.model.Ingredient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.IngredientService;
+import com.example.recipesapp.services.IngredientService;
 
 @RestController
-@RequestMapping
+@RequestMapping("/ingredient")
 
 public class IngredientController {
     private IngredientService ingredientService;

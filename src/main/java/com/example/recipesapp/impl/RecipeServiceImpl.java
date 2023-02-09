@@ -1,23 +1,23 @@
-package impl;
+package com.example.recipesapp.impl;
 
-import model.Ingredient;
-import model.Recipe;
+import com.example.recipesapp.model.Recipe;
 import org.springframework.stereotype.Service;
-import services.RecipeService;
+import com.example.recipesapp.services.RecipeService;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Service
 public class RecipeServiceImpl implements RecipeService {
-    private static int id = 0;
+    private static int recipeId = 0;
 
     private static Map<Integer, Recipe> recipes = new LinkedHashMap<>();
 
     @Override
     public int addRecipe(Recipe recipe) {
-        recipes.put(id, recipe);
-        return id;
+        recipeId++;
+        recipes.put(recipeId, recipe);
+        return recipeId;
     }
 
     @Override
