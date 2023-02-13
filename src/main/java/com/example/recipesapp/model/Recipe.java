@@ -1,9 +1,9 @@
-package model;
+package com.example.recipesapp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.util.LinkedList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -11,6 +11,6 @@ public class Recipe {
 
     private String name;
     private int cookingTime;
-    private LinkedList<Ingredient> ingredients;
-    private LinkedList<String> steps;
+    private List<Ingredient> ingredients;
+    private List<String> steps;
 }

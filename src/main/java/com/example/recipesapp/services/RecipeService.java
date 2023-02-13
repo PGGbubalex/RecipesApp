@@ -1,6 +1,6 @@
-package services;
+package com.example.recipesapp.services;
 
-import model.Recipe;
+import com.example.recipesapp.model.Recipe;
 
 import java.util.Map;
 
